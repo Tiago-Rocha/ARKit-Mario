@@ -1,18 +1,16 @@
-//
-//  ViewController.swift
-//  arkitTest
-//
-//  Created by Tiago Rocha on 30/09/2017.
-//  Copyright © 2017 pixelscamp. All rights reserved.
-//
-
 import UIKit
-
+import ARKit
+import SceneKit
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rightButton: UIButton!
+    @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let config = ARWorldTrackingConfiguration()
+        config.planeDetection = .horizontal
+        sceneView.session.run(config)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +18,30 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func randomFloat(min: Float, max: Float) -> Float {
+        return (Float(arc4random()) / 0xFFFFFFFF) * (max - min)
+    }
+    @IBAction func addCube(_ sender: Any) {
+        print("add cube")
+        let cubeNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        let cc = getCameraCoordinates(sceneView: sceneView)
+        cubeNode.position = SCNVector3(cc.x, cc.y, cc.z)
+        
+        sceneView.scene.rootNode.addChildNode(cubeNode)
+    }
+    
+    @IBAction func addCup(_ sender: Any) {
+        print("add cup")
+    }
+    func getCameraCoordinates(sceneView: ARSCNView) -> CameraCoordinates  {
+        let cameraTransform = sceneView.session.currentFrame?.camera.transform
+        let cameraCoordinates = MDLTransform(matrix: cameraTransform!)
+        var cc = CameraCoordinates()
+        cc.x = cameraCoordinates.translation.x
+        cc.y = cameraCoordinates.translation.y
+        cc.z = cameraCoordinates.translation.z
+        
+        return cc
+    }
 }
 
