@@ -20,12 +20,11 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hO-4v-wkv">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-pj-gTX">
-                                <rect key="frame" x="0.0" y="635" width="50" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-pj-gTX">
+                                <rect key="frame" x="0.0" y="635" width="86" height="32"/>
                                 <color key="backgroundColor" red="0.80784313730000001" green="0.24313725489999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Cc9-lf-y8A"/>
-                                    <constraint firstAttribute="width" constant="50" id="ooQ-Pj-33V"/>
                                 </constraints>
                                 <state key="normal" title="AddCube"/>
                                 <connections>
@@ -37,7 +36,6 @@
                                 <color key="backgroundColor" red="0.0" green="0.94310897439999997" blue="0.29821885310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="l5i-2n-7Sm"/>
-                                    <constraint firstAttribute="width" constant="50" id="yFG-Om-Puf"/>
                                 </constraints>
                                 <state key="normal" title="AddCube"/>
                                 <connections>
@@ -48,10 +46,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="J1P-pj-gTX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7dj-A2-Bc3"/>
+                            <constraint firstItem="J1P-pj-gTX" firstAttribute="width" secondItem="HpG-oN-mKF" secondAttribute="width" id="J7Z-2J-569"/>
                             <constraint firstItem="2hO-4v-wkv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OJU-ow-wlc"/>
                             <constraint firstItem="2hO-4v-wkv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pdw-wt-KnL"/>
                             <constraint firstItem="HpG-oN-mKF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q37-rL-tOI"/>
                             <constraint firstItem="2hO-4v-wkv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RZJ-pQ-SXz"/>
+                            <constraint firstItem="HpG-oN-mKF" firstAttribute="leading" secondItem="J1P-pj-gTX" secondAttribute="trailing" id="S5S-vu-MBx"/>
                             <constraint firstItem="2hO-4v-wkv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cwN-de-chd"/>
                             <constraint firstItem="J1P-pj-gTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="im7-5o-qF7"/>
                             <constraint firstItem="HpG-oN-mKF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xgi-4L-85Y"/>
