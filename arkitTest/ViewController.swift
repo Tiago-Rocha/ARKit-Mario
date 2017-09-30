@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     func randomFloat(min: Float, max: Float) -> Float {
         return (Float(arc4random()) / 0xFFFFFFFF) * (max - min)
     }
+    func addObjects() {
+        
+    }
     @IBAction func addCube(_ sender: Any) {
         print("add cube")
         let cubeNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
@@ -31,12 +34,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addCup(_ sender: Any) {
+        print("add cup")
         let cupNode = SCNNode()
         
         let cc = getCameraCoordinates(sceneView: sceneView)
         cupNode.position = SCNVector3(cc.x, cc.y, cc.z)
-        
-        guard let virtualObjectScene = SCNScene(named: "cup.scn", inDirectory: "../Models.scnassets/cup") else {
+        guard let virtualObjectScene = SCNScene(named: "Models.scnassets/mario/source/Mario/mario.scn") else {
             print("failed")
             return
         }

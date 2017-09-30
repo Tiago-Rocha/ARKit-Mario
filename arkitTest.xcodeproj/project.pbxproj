@@ -13,6 +13,7 @@
 		477693361F7F2EB2000CE311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477693351F7F2EB2000CE311 /* Assets.xcassets */; };
 		477693391F7F2EB2000CE311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477693371F7F2EB2000CE311 /* LaunchScreen.storyboard */; };
 		477693411F7F36F8000CE311 /* CameraCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477693401F7F36F8000CE311 /* CameraCoordinates.swift */; };
+		47D600921F7F70B7009E1DCC /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 477693421F7F3987000CE311 /* Models.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				477693391F7F2EB2000CE311 /* LaunchScreen.storyboard in Resources */,
+				47D600921F7F70B7009E1DCC /* Models.scnassets in Resources */,
 				477693361F7F2EB2000CE311 /* Assets.xcassets in Resources */,
 				477693341F7F2EB2000CE311 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPL6N62Q58;
 				INFOPLIST_FILE = arkitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixelscamp.arkitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WPL6N62Q58;
 				INFOPLIST_FILE = arkitTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pixelscamp.arkitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
