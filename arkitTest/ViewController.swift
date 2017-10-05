@@ -28,6 +28,9 @@ class ViewController: UIViewController {
         print("add cube")
         let cubeNode = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
         let cc = getCameraCoordinates(sceneView: sceneView)
+        print(cc.x)
+        print(cc.y)
+        print(cc.z)
         cubeNode.position = SCNVector3(cc.x, cc.y, cc.z)
         
         sceneView.scene.rootNode.addChildNode(cubeNode)
@@ -38,12 +41,11 @@ class ViewController: UIViewController {
         let cupNode = SCNNode()
         
         let cc = getCameraCoordinates(sceneView: sceneView)
-        cupNode.position = SCNVector3(cc.x, cc.y, cc.z)
-        guard let virtualObjectScene = SCNScene(named: "Models.scnassets/mario/source/Mario/mario.scn") else {
+        cupNode.position = SCNVector3(cc.x + 10, cc.y, cc.z)
+        guard let virtualObjectScene = SCNScene(named: "Models.scnassets/Mario/mario.scn") else {
             print("failed")
             return
         }
-        
         let wrapperNode = SCNNode()
         for child in virtualObjectScene.rootNode.childNodes {
             child.geometry?.firstMaterial?.lightingModel = .physicallyBased
