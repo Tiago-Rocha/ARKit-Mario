@@ -26,7 +26,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Cc9-lf-y8A"/>
                                 </constraints>
-                                <state key="normal" title="AddCube"/>
+                                <state key="normal" title="Mario"/>
                                 <connections>
                                     <action selector="addCup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zjg-2p-vNi"/>
                                 </connections>
@@ -37,7 +37,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="l5i-2n-7Sm"/>
                                 </constraints>
-                                <state key="normal" title="AddCube"/>
+                                <state key="normal" title="Cube"/>
                                 <connections>
                                     <action selector="addCube:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ea-UJ-eD6"/>
                                 </connections>

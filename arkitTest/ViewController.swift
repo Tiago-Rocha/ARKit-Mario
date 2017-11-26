@@ -6,11 +6,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     @IBOutlet weak var sceneView: ARSCNView!
+    var arConfig: ARWorldTrackingConfiguration = ARWorldTrackingConfiguration()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let config = ARWorldTrackingConfiguration()
-        config.planeDetection = .horizontal
-        sceneView.session.run(config)
+        arConfig.planeDetection = .horizontal
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        sceneView.session.run(arConfig)
     }
 
     override func didReceiveMemoryWarning() {
